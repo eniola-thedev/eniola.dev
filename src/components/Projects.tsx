@@ -11,7 +11,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 interface Project {
   name: string;
-  type: "website" | "mobile" | "DeFi";
+  type: "website" | "Mobile App" | "DeFi";
   status?: "In Progress" | "Completed";
   description: string;
   stack: string[];
@@ -52,21 +52,23 @@ export const Projects = () => {
     },
     {
       name: "UniFyd NG",
-      type: "website",
+      type: "Mobile App",
       status: "In Progress",
       description:
         "UniFyd NG is a student-focused marketplace that connects students to buy and sell products and services within their university community, making campus transactions easier, faster, and more accessible.",
       stack: [
-        "React",
-        "Vite",
+        "React Native",
+        "Expo",
         "TypeScript",
         "Tailwind CSS",
-        "Node.js",
+        "Expo Router",
         "PostgreSQL",
+        "NativeWind",
         "Paystack",
       ],
       liveUrl: "#",
       image: "/images/projects/unifyd.png",
+      githubUrl: "https://github.com/eniola-thedev/UniFyd-Mobile",
     },
     {
       name: "DIGO",
@@ -166,7 +168,7 @@ export const Projects = () => {
                         <Badge variant="outline" className="w-fit">
                           {project.type === "website"
                             ? "Website"
-                            : project.type === "mobile"
+                            : project.type === "Mobile App"
                               ? "Mobile App"
                               : project.type}
                         </Badge>
