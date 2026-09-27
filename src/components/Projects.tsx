@@ -81,15 +81,15 @@ export const Projects = () => {
       image: "/images/projects/digo.png",
     },
     {
-      name: "D3 DeFi Dash",
-      type: "DeFi",
-      status: "In Progress",
+      name: "Award voting plaform",
+      type: "website",
+      status: "Completed",
       description:
-        "A decentralized finance (DeFi) web application designed to present core protocol features, token utilities, and user flows with a clear and intuitive interface.",
-      stack: ["React", "Next.js", "web3.js", "Supabase", "WalletConnect"],
-      liveUrl: "https://defidash.app/",
-      githubUrl: "#",
-      image: "/images/projects/defi.png",
+        "A modern web-based voting platform built for the NAQSS Award and Prom Night. The platform allows attendees to purchase voting points through manual payment, receive unique voting codes, and use those points to vote for contestants across multiple award categories.",
+      stack: ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "TailwindCSS"],
+      liveUrl: "https://naqss-prom-night.vercel.app//",
+      githubUrl: "https://github.com/eniola-thedev/Award-Voting-Platform",
+      image: "/images/projects/award.png",
     },
     {
       name: "FairDrop",
