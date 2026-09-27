@@ -30,6 +30,7 @@ export const Projects = () => {
         "A modern fashion e-commerce store for discovering and shopping curated clothing and accessories.",
       stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Vercel"],
       liveUrl: "https://thewardrobe-co.vercel.app",
+      githubUrl: "#",
       image: "/images/projects/wear 2.png",
     },
     {
@@ -78,6 +79,7 @@ export const Projects = () => {
         "A visually engaging meme coin website built to drive community interest, highlight tokenomics, and support early-stage crypto adoption.",
       stack: ["React", "TypeScript", "TailwindCSS"],
       liveUrl: "https://digoonchain.netlify.app/",
+      githubUrl: "#",
       image: "/images/projects/digo.png",
     },
     {
