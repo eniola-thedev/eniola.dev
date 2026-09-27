@@ -23,14 +23,14 @@ interface Project {
 export const Projects = () => {
   const projects: Project[] = [
     {
-      name: "Stonk",
+      name: "The Wardrobe Co",
       type: "website",
       status: "Completed",
       description:
-        "A visually engaging meme coin website built to drive community interest, highlight tokenomics, and support early-stage crypto adoption.",
-      stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"],
-      liveUrl: "https://www.stonkguyonchain.com/",
-      image: "/images/projects/stonk.png",
+        "A modern fashion e-commerce store for discovering and shopping curated clothing and accessories.",
+      stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Vercel"],
+      liveUrl: "thewardrobe-co.vercel.app",
+      image: "/images/projects/wear 2.png",
     },
     {
       name: "MedChain",
