@@ -29,7 +29,7 @@ export const Projects = () => {
       description:
         "A modern fashion e-commerce store for discovering and shopping curated clothing and accessories.",
       stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Vercel"],
-      liveUrl: "https://thewardrobe-co.vercel.app",
+      liveUrl: "/thewardrobe-co.vercel.app",
       image: "/images/projects/wear 2.png",
     },
     {
