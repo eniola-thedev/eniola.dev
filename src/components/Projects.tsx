@@ -28,10 +28,10 @@ export const Projects = () => {
       status: "Completed",
       description:
         "A modern fashion e-commerce store for discovering and shopping curated clothing and accessories.",
-      stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Vercel"],
+      stack: ["React.js", "TypeScript", "Tailwind CSS","Vercel"],
       liveUrl: "https://thewardrobe-co.vercel.app",
-      githubUrl: "#",
       image: "/images/projects/wear 2.png",
+      githubUrl: "#",
     },
     {
       name: "MedChain",
@@ -45,6 +45,8 @@ export const Projects = () => {
         "Supabase",
         "Tailwind CSS",
         "Solidity",
+        "Render",
+        "Vercel",
         "Node.js",
       ],
       liveUrl: "https://blockchain-ehr.vercel.app",
@@ -79,8 +81,8 @@ export const Projects = () => {
         "A visually engaging meme coin website built to drive community interest, highlight tokenomics, and support early-stage crypto adoption.",
       stack: ["React", "TypeScript", "TailwindCSS"],
       liveUrl: "https://digoonchain.netlify.app/",
-      githubUrl: "#",
       image: "/images/projects/digo.png",
+      githubUrl: "#",
     },
     {
       name: "Award voting plaform",
@@ -90,8 +92,9 @@ export const Projects = () => {
         "A modern web-based voting platform built for the NAQSS Award and Prom Night. The platform allows attendees to purchase voting points through manual payment, receive unique voting codes, and use those points to vote for contestants across multiple award categories.",
       stack: ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "TailwindCSS"],
       liveUrl: "https://naqss-prom-night.vercel.app//",
-      githubUrl: "https://github.com/eniola-thedev/Award-Voting-Platform",
       image: "/images/projects/award.png",
+      githubUrl: "https://github.com/eniola-thedev/Award-Voting-Platform",
+
     },
     {
       name: "FairDrop",
@@ -101,8 +104,9 @@ export const Projects = () => {
         "A provably fair giveaway platform that combines Web3 transparency with local payment rails. It allows anyone to create, fund, and manage giveaway campaigns while ensuring fair winner selection and seamless fiat or crypto payout.",
       stack: ["Next.js", "Supabase", "WalletConnect", "TailwindCSS"],
       liveUrl: "https://FairDrop.io",
-      githubUrl: "#",
       image: "/images/projects/fairdrop.png",
+      githubUrl: "#",
+
     },
   ];
 
