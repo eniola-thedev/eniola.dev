@@ -31,7 +31,7 @@ export const Projects = () => {
       stack: ["React.js", "TypeScript", "Tailwind CSS","Vercel"],
       liveUrl: "https://thewardrobe-co.vercel.app",
       image: "/images/projects/wear 2.png",
-      githubUrl: "#",
+      githubUrl: "",
     },
     {
       name: "MedChain",
@@ -69,7 +69,7 @@ export const Projects = () => {
         "NativeWind",
         "Paystack",
       ],
-      liveUrl: "#",
+      liveUrl: "",
       image: "/images/projects/unifyd.png",
       githubUrl: "https://github.com/eniola-thedev/UniFyd-Mobile",
     },
@@ -82,7 +82,7 @@ export const Projects = () => {
       stack: ["React", "TypeScript", "TailwindCSS"],
       liveUrl: "https://digoonchain.netlify.app/",
       image: "/images/projects/digo.png",
-      githubUrl: "#",
+      githubUrl: "",
     },
     {
       name: "Award voting plaform",
@@ -105,7 +105,7 @@ export const Projects = () => {
       stack: ["Next.js", "Supabase", "WalletConnect", "TailwindCSS"],
       liveUrl: "https://FairDrop.io",
       image: "/images/projects/fairdrop.png",
-      githubUrl: "#",
+      githubUrl: "",
 
     },
   ];
