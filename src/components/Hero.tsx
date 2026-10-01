@@ -65,7 +65,7 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://github.com/softlife-engineer"
+                href="https://github.com/eniola-thedev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

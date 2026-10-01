@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -7,7 +8,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { BookOpen, ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Project {
   name: string;
@@ -16,11 +18,14 @@ interface Project {
   description: string;
   stack: string[];
   liveUrl?: string;
+  caseStudyUrl?: string;
   githubUrl?: string;
   image?: string;
 }
 
 export const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState<"All" | "website" | "Mobile App">("All");
+
   const projects: Project[] = [
     {
       name: "The Wardrobe Co",
@@ -74,15 +79,16 @@ export const Projects = () => {
       githubUrl: "https://github.com/eniola-thedev/UniFyd-Mobile",
     },
     {
-      name: "DIGO",
-      type: "website",
+      name: "ABINCI",
+      type: "Mobile App",
       status: "Completed",
       description:
-        "A visually engaging meme coin website built to drive community interest, highlight tokenomics, and support early-stage crypto adoption.",
-      stack: ["React", "TypeScript", "TailwindCSS"],
-      liveUrl: "https://digoonchain.netlify.app/",
-      image: "/images/projects/digo.png",
-      githubUrl: "",
+        "ABINCI is a mobile application designed to help users discover hausa dishes and order food from local restaurants. It provides a seamless and user-friendly experience for browsing menus, placing orders, and making payments, all from the convenience of a mobile device.",
+      stack: ["React Native", "TypeScript", "TailwindCSS", "Expo"],
+      liveUrl: "",
+      caseStudyUrl: "/projects/abinci",
+      image: "/images/projects/Abinci.jpg",
+      githubUrl: "https://github.com/eniola-thedev/ABINCI",
     },
     {
       name: "Award voting plaform",
@@ -110,6 +116,10 @@ export const Projects = () => {
     },
   ];
 
+  const visibleProjects = projects.filter(
+    (project) => activeFilter === "All" || project.type === activeFilter,
+  );
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
@@ -128,9 +138,25 @@ export const Projects = () => {
             </p>
           </div>
 
+          <div className="flex justify-center" role="group" aria-label="Filter projects">
+            {(["All", "website", "Mobile App"] as const).map((filter) => (
+              <Button
+                key={filter}
+                type="button"
+                variant={activeFilter === filter ? "default" : "outline"}
+                size="sm"
+                aria-pressed={activeFilter === filter}
+                className="rounded-none first:rounded-l-md last:rounded-r-md"
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter === "website" ? "Website" : filter}
+              </Button>
+            ))}
+          </div>
+
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <Card
                 key={project.name}
                 className="group hover:shadow-glow transition-all duration-300 hover-lift border-border overflow-hidden flex flex-col"
@@ -213,7 +239,19 @@ export const Projects = () => {
 
                   {/* Buttons */}
                   <div className="flex gap-3 pt-2 mt-auto">
-                    {project.liveUrl && project.liveUrl !== "#" && (
+                    {project.caseStudyUrl ? (
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="gap-2 flex-1"
+                        asChild
+                      >
+                        <Link to={project.caseStudyUrl}>
+                          <BookOpen className="h-4 w-4" />
+                          View Case Study
+                        </Link>
+                      </Button>
+                    ) : project.liveUrl && project.liveUrl !== "#" ? (
                       <Button
                         variant="default"
                         size="sm"
@@ -229,9 +267,20 @@ export const Projects = () => {
                           Live Demo
                         </a>
                       </Button>
+                    ) : (
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="gap-2 flex-1"
+                        disabled
+                        aria-label="Live demo unavailable"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Live Demo
+                      </Button>
                     )}
 
-                    {project.githubUrl && project.githubUrl !== "#" && (
+                    {project.githubUrl && project.githubUrl !== "#" ? (
                       <Button
                         variant="outline"
                         size="sm"
@@ -246,6 +295,17 @@ export const Projects = () => {
                           <Github className="h-4 w-4" />
                           Source Code
                         </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-2 flex-1"
+                        disabled
+                        aria-label="Source code unavailable"
+                      >
+                        <Github className="h-4 w-4" />
+                        Source Code
                       </Button>
                     )}
                   </div>
