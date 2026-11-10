@@ -28,15 +28,15 @@ export const Projects = () => {
 
   const projects: Project[] = [
     {
-      name: "The Wardrobe Co",
+      name: "Monifyd",
       type: "website",
       status: "Completed",
       description:
-        "A modern fashion e-commerce store for discovering and shopping curated clothing and accessories.",
-      stack: ["React.js", "TypeScript", "Tailwind CSS","Vercel"],
-      liveUrl: "https://thewardrobe-co.vercel.app",
-      image: "/images/projects/wear 2.png",
-      githubUrl: "",
+        "Monifyd is a non-custodial crypto payment gateway. It lets merchants accept crypto through payment links, invoices, and a hosted checkout. Developers can integrate it with a REST API and webhooks, and there’s a test mode for trying things out safely. Because it’s non-custodial, funds go straight to the merchant’s wallet and Monifyd never holds them. The customer pays the platform fee on top of the price, so the merchant receives the full amount.",
+      stack: ["TypeScript","Next.js", "PostgreSQL", "REST API","Zod",],
+      liveUrl: "https://monifyd.com",
+      image: "/images/projects/monifyd.jpg",
+      githubUrl: "https://github.com/eniola-thedev/Monifyd",
     },
     {
       name: "MedChain",
